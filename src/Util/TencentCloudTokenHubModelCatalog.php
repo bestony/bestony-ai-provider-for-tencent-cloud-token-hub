@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Util;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Keeps capability decisions separate from HTTP and WordPress code.
  */

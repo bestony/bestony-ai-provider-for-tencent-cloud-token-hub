@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Models;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 use TencentCloudTokenHub\AiProvider\Provider\TencentCloudTokenHubProvider;
 use TencentCloudTokenHub\AiProvider\Util\TencentCloudTokenHubConfig;
 use WordPress\AiClient\Providers\Http\DTO\Request;

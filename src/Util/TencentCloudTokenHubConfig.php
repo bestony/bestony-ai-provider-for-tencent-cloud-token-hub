@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Util;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 use WordPress\AiClient\AiClient;
 use WordPress\AiClient\Providers\Http\DTO\RequestOptions;
 
@@ -157,6 +161,6 @@ final class TencentCloudTokenHubConfig
      */
     public static function getUserAgent(): string
     {
-        return 'bestony-ai-provider-for-tencentcloud-tokenhub/' . self::VERSION;
+        return 'bestony-ai-provider-for-tencent-cloud-token-hub/' . self::VERSION;
     }
 }

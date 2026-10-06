@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       AI Provider for Tencent Cloud Token Hub
- * Plugin URI:        https://github.com/bestony/AI-Provider-for-Tencent-Cloud-Token-Hub
- * Description:       Tencent Cloud Token Hub provider for the WordPress AI Client.
+ * Plugin Name:       Bestony AI Provider for Tencent Cloud Token Hub
+ * Plugin URI:        https://github.com/bestony/bestony-ai-provider-for-tencent-cloud-token-hub
+ * Description:       Bestony's independent Tencent Cloud Token Hub provider for the WordPress AI Client.
  * Requires at least: 7.0
  * Requires PHP:      7.4
  * Version:           1.0.0
@@ -10,7 +10,7 @@
  * Author URI:        https://github.com/bestony
  * License:           GPL-2.0-or-later
  * License URI:       https://spdx.org/licenses/GPL-2.0-or-later.html
- * Text Domain:       bestony-ai-provider-for-tencentcloud-tokenhub
+ * Text Domain:       bestony-ai-provider-for-tencent-cloud-token-hub
  *
  * @package TencentCloudTokenHub\AiProvider
  */

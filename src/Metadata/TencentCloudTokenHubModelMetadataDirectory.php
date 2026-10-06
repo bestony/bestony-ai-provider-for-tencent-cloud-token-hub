@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Metadata;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 use TencentCloudTokenHub\AiProvider\Provider\TencentCloudTokenHubProvider;
 use TencentCloudTokenHub\AiProvider\Util\TencentCloudTokenHubConfig;
 use TencentCloudTokenHub\AiProvider\Util\TencentCloudTokenHubModelCatalog;

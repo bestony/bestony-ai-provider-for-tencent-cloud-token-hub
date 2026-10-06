@@ -1,4 +1,4 @@
-=== AI Provider for Tencent Cloud Token Hub ===
+=== Bestony AI Provider for Tencent Cloud Token Hub ===
 Contributors:      bestony
 Tags:              ai, connector, tencent-cloud, tokenhub, chat
 Requires at least: 7.0
@@ -8,7 +8,9 @@ Requires PHP:      7.4
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Tencent Cloud Token Hub provider for the WordPress AI Client.
+Bestony AI Provider for Tencent Cloud Token Hub adds Tencent Cloud Token Hub as a provider for the WordPress AI Client.
+
+This is an independent third-party integration. It is not affiliated with or endorsed by Tencent Cloud.
 
 == Description ==
 
@@ -23,7 +25,7 @@ This plugin adds Tencent Cloud Token Hub's OpenAI-compatible Chat Completions AP
 
 == Installation ==
 
-1. Copy the plugin directory to `/wp-content/plugins/ai-provider-for-tencentcloud-tokenhub/`.
+1. Copy the plugin directory to `/wp-content/plugins/bestony-ai-provider-for-tencent-cloud-token-hub/`.
 2. Activate the plugin through the Plugins menu.
 3. Go to Settings → Connectors, open the Tencent Cloud Token Hub card and paste your API key.
 
@@ -54,12 +56,17 @@ Token Hub rejects a `messages` array longer than four entries. This provider thr
 
 == External services ==
 
-The plugin connects to Tencent Cloud Token Hub:
+This independent plugin connects to Tencent Cloud Token Hub, a service provided by Tencent Cloud:
 
 * `GET /models` — fetches the online model list and checks credentials.
 * `POST /chat/completions` — sends prompts, conversation history, tools, schemas and image inputs for text generation.
 
 Requests use `Authorization: Bearer <API key>`. See the [Token Hub API documentation](https://cloud.tencent.com/document/product/1823/130078) and [OpenAI Chat Completions field reference](https://cloud.tencent.com/document/product/1823/135872).
+
+This service is provided by Tencent Cloud:
+
+* Terms of service: [https://cloud.tencent.com/document/product/301/1967](https://cloud.tencent.com/document/product/301/1967)
+* Privacy policy: [https://cloud.tencent.com/document/product/301/11470](https://cloud.tencent.com/document/product/301/11470)
 
 == Frequently Asked Questions ==
 

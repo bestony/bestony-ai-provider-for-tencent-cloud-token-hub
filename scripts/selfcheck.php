@@ -15,7 +15,11 @@
 declare(strict_types=1);
 
 $root = dirname(__DIR__);
+// Dev-only CLI harness: exit on direct web access; define ABSPATH for the plugin files' guards.
 if (!defined('ABSPATH')) {
+    if ('cli' !== PHP_SAPI) {
+        exit; // Exit if accessed directly.
+    }
     define('ABSPATH', $root . '/');
 }
 
@@ -83,7 +87,7 @@ if ($previousStructuredOutput === false) {
 }
 
 check(
-    TencentCloudTokenHubConfig::getUserAgent() === 'bestony-ai-provider-for-tencentcloud-tokenhub/1.0.0',
+    TencentCloudTokenHubConfig::getUserAgent() === 'bestony-ai-provider-for-tencent-cloud-token-hub/1.0.0',
     'user agent identifies the provider'
 );
 check(TencentCloudTokenHubConfig::getRequestTimeout() >= 60.0, 'request timeout is suitable for model generation');
@@ -173,7 +177,7 @@ function use_tokenhub_sdk_checks(): void
         }
     }
 
-    require_once dirname(__DIR__) . '/bestony-ai-provider-for-tencentcloud-tokenhub.php';
+    require_once dirname(__DIR__) . '/bestony-ai-provider-for-tencent-cloud-token-hub.php';
 
     $response = new \WordPress\AiClient\Providers\Http\DTO\Response(
         200,

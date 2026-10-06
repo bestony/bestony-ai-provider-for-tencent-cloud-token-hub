@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Models;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 use TencentCloudTokenHub\AiProvider\Util\TencentCloudTokenHubConfig;
 use WordPress\AiClient\Common\Exception\InvalidArgumentException;
 use WordPress\AiClient\Providers\OpenAiCompatibleImplementation\AbstractOpenAiCompatibleTextGenerationModel;

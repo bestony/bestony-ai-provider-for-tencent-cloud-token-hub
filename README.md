@@ -1,6 +1,8 @@
-# AI Provider for Tencent Cloud Token Hub
+# Bestony AI Provider for Tencent Cloud Token Hub
 
-Tencent Cloud Token Hub as an OpenAI-compatible provider for the [WordPress AI Client](https://github.com/WordPress/php-ai-client).
+Bestony AI Provider for Tencent Cloud Token Hub adds Tencent Cloud Token Hub as an OpenAI-compatible provider for the [WordPress AI Client](https://github.com/WordPress/php-ai-client).
+
+This is an independent third-party integration. It is not affiliated with or endorsed by Tencent Cloud.
 
 ## What it does
 
@@ -20,7 +22,7 @@ The provider ID is `tencentcloud_tokenhub`.
 
 ## Install
 
-Copy this directory to `wp-content/plugins/ai-provider-for-tencentcloud-tokenhub/`, activate it, then open **Settings → Connectors**. Open **Tencent Cloud Token Hub** and enter the API key.
+Copy this directory to `wp-content/plugins/bestony-ai-provider-for-tencent-cloud-token-hub/`, activate it, then open **Settings → Connectors**. Open **Tencent Cloud Token Hub** and enter the API key.
 
 ## Configuration
 
@@ -58,6 +60,12 @@ The plugin calls:
 - `POST https://api.lkeap.cloud.tencent.com/plan/v3/chat/completions` to generate text.
 
 Both requests use `Authorization: Bearer <API key>`. Prompts, conversation history, tool definitions, schemas, and attached image data supplied by the calling plugin are sent to Token Hub when a generation is requested.
+
+## External services
+
+This plugin connects to Tencent Cloud Token Hub to discover online models and generate text. It sends the API key in the `Authorization` header, and sends prompts, conversation history, tool definitions, output schemas, and attached image data when a generation request is made. Requests are sent only to `https://api.lkeap.cloud.tencent.com/plan/v3`.
+
+Tencent Cloud provides this service. See the [Tencent Cloud Terms of Service](https://cloud.tencent.com/document/product/301/1967) and [Tencent Cloud Privacy Policy](https://cloud.tencent.com/document/product/301/11470).
 
 ## Development
 

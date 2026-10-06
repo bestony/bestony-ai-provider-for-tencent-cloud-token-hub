@@ -20,7 +20,7 @@ jobs:
         run: |
           set -euo pipefail
           tag="${GITHUB_REF_NAME#v}"
-          header=$(grep -m1 '^ \* Version:' bestony-ai-provider-for-tencentcloud-tokenhub.php | awk '{print $3}')
+          header=$(grep -m1 '^ \* Version:' bestony-ai-provider-for-tencent-cloud-token-hub.php | awk '{print $3}')
           stable=$(grep -m1 '^Stable tag:' readme.txt | awk '{print $3}')
           # The User-Agent is built from this constant, so it drifts silently if it is not checked.
           config=$(perl -ne "print \$1 if /const VERSION = '([\d.]+)'/" src/Util/TencentCloudTokenHubConfig.php)
@@ -49,4 +49,4 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: bestony-ai-provider-for-tencentcloud-tokenhub
+          SLUG: bestony-ai-provider-for-tencent-cloud-token-hub

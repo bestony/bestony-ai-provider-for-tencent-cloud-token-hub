@@ -10,6 +10,10 @@ declare(strict_types=1);
 
 namespace TencentCloudTokenHub\AiProvider\Provider;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 use TencentCloudTokenHub\AiProvider\Metadata\TencentCloudTokenHubModelMetadataDirectory;
 use TencentCloudTokenHub\AiProvider\Models\TencentCloudTokenHubTextGenerationModel;
 use TencentCloudTokenHub\AiProvider\Util\TencentCloudTokenHubConfig;
@@ -92,7 +96,7 @@ class TencentCloudTokenHubProvider extends AbstractApiProvider
         if (version_compare(AiClient::VERSION, '1.2.0', '>=')) {
             $description = 'Text and vision generation with Tencent Cloud Token Hub models.';
             $args[] = function_exists('__')
-                ? __('Text and vision generation with Tencent Cloud Token Hub models.', 'bestony-ai-provider-for-tencentcloud-tokenhub')
+                ? __('Text and vision generation with Tencent Cloud Token Hub models.', 'bestony-ai-provider-for-tencent-cloud-token-hub')
                 : $description;
         }
 
